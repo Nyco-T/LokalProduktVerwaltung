@@ -73,8 +73,8 @@ class Buch extends Produkt {
 
     public
     void display ( ) {
-        System.out.println ( "Titel: " + getTitel () );
-        System.out.println ( "Beschreibung: " + getBeschreibung () );
+        System.out.println ( "Titel: " + getTitel ( ) );
+        System.out.println ( "Beschreibung: " + getBeschreibung ( ) );
         System.out.println ( "Autor: " + autorVorname + " " + autorNachname );
         System.out.println ( "Sprache: " + buchSprache );
         System.out.println ( "ISBN: " + isbn );

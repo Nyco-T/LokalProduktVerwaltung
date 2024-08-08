@@ -34,8 +34,8 @@ class Geschaeftswagen extends Produkt {
 
     public
     void display ( ) {
-        System.out.println ( "Name: " + getTitel () );
-        System.out.println ( "Farbe: " + getBeschreibung () );
+        System.out.println ( "Name: " + getTitel ( ) );
+        System.out.println ( "Farbe: " + getBeschreibung ( ) );
         System.out.println ( "Kilometerstand: " + kmStand );
         System.out.println ( "Standort des Autos: " + parkplatz );
     }

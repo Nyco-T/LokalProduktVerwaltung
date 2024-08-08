@@ -34,8 +34,8 @@ class Notebook extends Produkt{
 
     public
     void display ( ) {
-        System.out.println ( "Titel: " + getTitel () );
-        System.out.println ( "Beschreibung: " + getBeschreibung () );
+        System.out.println ( "Titel: " + getTitel ( ) );
+        System.out.println ( "Beschreibung: " + getBeschreibung ( ) );
         System.out.println ( "Größe des Speichers: " + speicherplatz );
         System.out.println ( "Sprache: " + prozessor );
 
