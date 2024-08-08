@@ -1,41 +1,16 @@
 package mercatis.com;
 
 public
-class Geschaeftswagen {
-    private final int    fortlaufendenummer;
-    private       String titel;
-    private       String beschreibung;
+class Geschaeftswagen extends Produkt {
     private       int    kmStand;
     private       String parkplatz;
 
     public
-    Geschaeftswagen ( int fortlaufendenummer , String titel , String beschreibung , int kmStand , String parkplatz ) {
-        this.fortlaufendenummer = fortlaufendenummer;
-        this.titel              = titel;
-        this.beschreibung       = beschreibung;
+    Geschaeftswagen (int fortlaufendenummer, String titel, String beschreibung, int kmStand , String parkplatz ) {
+        super(fortlaufendenummer, titel, beschreibung );
         this.kmStand            = kmStand;
         this.parkplatz          = parkplatz;
 
-    }
-
-    public
-    String getTitel ( ) {
-        return titel;
-    }
-
-    public
-    void setTitel ( String titel ) {
-        this.titel = titel;
-    }
-
-    public
-    String getBeschreibung ( ) {
-        return beschreibung;
-    }
-
-    public
-    void setBeschreibung ( String beschreibung ) {
-        this.beschreibung = beschreibung;
     }
 
     public
@@ -58,10 +33,9 @@ class Geschaeftswagen {
 
 
     public
-    void anzeigen ( ) {
-        System.out.println ( "Nummer: " + fortlaufendenummer );
-        System.out.println ( "Name des Autos:" + titel );
-        System.out.println ( "Beschreibung: " + beschreibung );
+    void display ( ) {
+        System.out.println ( "Name: " + getTitel () );
+        System.out.println ( "Farbe: " + getBeschreibung () );
         System.out.println ( "Kilometerstand: " + kmStand );
         System.out.println ( "Standort des Autos: " + parkplatz );
     }

@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.sql.*;
 
 public
 class Main {
@@ -157,8 +156,8 @@ class Main {
         }
         else {
             System.out.println ( "\nGespeicherte Bücher:" );
-            for (int i = 0 ; i < buecherListe.size ( ) ; i++) {
-                System.out.println ( "Buch " + (i + 1) + ":" );
+            for ( int i = 0 ; i < buecherListe.size ( ) ; i++ ) {
+                System.out.println ( "Buch " + ( i + 1 ) + ":" );
                 buecherListe.get ( i ).display ( );
                 System.out.println ( "---------------------" );
             }
@@ -193,11 +192,11 @@ class Main {
         String searchTerm = scanner.nextLine ( ).toLowerCase ( );
 
         ArrayList < Buch > searchResults = new ArrayList <> ( );
-        for (Buch buch : buecherListe) {
+        for ( Buch buch : buecherListe ) {
             if ( buch.getTitel ( ).toLowerCase ( ).contains ( searchTerm ) ||
-                    buch.getAutorVorname ( ).toLowerCase ( ).contains ( searchTerm ) ||
-                    buch.getAutorNachname ( ).toLowerCase ( ).contains ( searchTerm ) ||
-                    buch.getIsbn ( ).contains ( searchTerm ) ) {
+                 buch.getAutorVorname ( ).toLowerCase ( ).contains ( searchTerm ) ||
+                 buch.getAutorNachname ( ).toLowerCase ( ).contains ( searchTerm ) ||
+                 buch.getIsbn ( ).contains ( searchTerm ) ) {
                 searchResults.add ( buch );
             }
         }
@@ -208,8 +207,8 @@ class Main {
         }
         else {
             System.out.println ( "\nGefundene Bücher:" );
-            for (int i = 0 ; i < searchResults.size ( ) ; i++) {
-                System.out.println ( "Buch " + (i + 1) + ":" );
+            for ( int i = 0 ; i < searchResults.size ( ) ; i++ ) {
+                System.out.println ( "Buch " + ( i + 1 ) + ":" );
                 searchResults.get ( i ).display ( );
                 System.out.println ( "---------------------" );
             }
@@ -292,9 +291,9 @@ class Main {
         }
         else {
             System.out.println ( "\nGespeicherte Notebooks:" );
-            for (int i = 0 ; i < notebookListe.size ( ) ; i++) {
-                System.out.println ( "Notebook " + (i + 1) + ":" );
-                notebookListe.get ( i ).darstellen ( );
+            for ( int i = 0 ; i < notebookListe.size ( ) ; i++ ) {
+                System.out.println ( "Notebook " + ( i + 1 ) + ":" );
+                notebookListe.get ( i ).display ( );
                 System.out.println ( "---------------------" );
             }
         }
@@ -329,10 +328,10 @@ class Main {
         String searchTerm = scanner.nextLine ( ).toLowerCase ( );
 
         ArrayList < Notebook > searchResults = new ArrayList <> ( );
-        for (Notebook notebook : notebookListe) {
+        for ( Notebook notebook : notebookListe ) {
             if ( notebook.getTitel ( ).toLowerCase ( ).contains ( searchTerm ) ||
-                    notebook.getBeschreibung ( ).toLowerCase ( ).contains ( searchTerm ) ||
-                    notebook.getProzessor ( ).toLowerCase ( ).contains ( searchTerm ) ) {
+                 notebook.getBeschreibung ( ).toLowerCase ( ).contains ( searchTerm ) ||
+                 notebook.getProzessor ( ).toLowerCase ( ).contains ( searchTerm ) ) {
                 searchResults.add ( notebook );
             }
         }
@@ -343,9 +342,9 @@ class Main {
         }
         else {
             System.out.println ( "\nGefundene Bücher:" );
-            for (int i = 0 ; i < searchResults.size ( ) ; i++) {
-                System.out.println ( "Buch " + (i + 1) + ":" );
-                searchResults.get ( i ).darstellen ( );
+            for ( int i = 0 ; i < searchResults.size ( ) ; i++ ) {
+                System.out.println ( "Buch " + ( i + 1 ) + ":" );
+                searchResults.get ( i ).display ( );
                 System.out.println ( "---------------------" );
             }
         }
@@ -429,9 +428,9 @@ class Main {
         }
         else {
             System.out.println ( "\nGespeicherte Autos:" );
-            for (int i = 0 ; i < geschaeftswagenListe.size ( ) ; i++) {
-                System.out.println ( "Auto " + (i + 1) + ":" );
-                geschaeftswagenListe.get ( i ).anzeigen ( );
+            for ( int i = 0 ; i < geschaeftswagenListe.size ( ) ; i++ ) {
+                System.out.println ( "Auto " + ( i + 1 ) + ":" );
+                geschaeftswagenListe.get ( i ).display ( );
                 System.out.println ( "---------------------" );
             }
         }
@@ -463,10 +462,10 @@ class Main {
         String searchTerm = scanner.nextLine ( ).toLowerCase ( );
 
         ArrayList < Geschaeftswagen > searchResults = new ArrayList <> ( );
-        for (Geschaeftswagen geschaeftswagen : geschaeftswagenListe) {
+        for ( Geschaeftswagen geschaeftswagen : geschaeftswagenListe ) {
             if ( geschaeftswagen.getTitel ( ).toLowerCase ( ).contains ( searchTerm ) ||
-                    geschaeftswagen.getBeschreibung ( ).toLowerCase ( ).contains ( searchTerm ) ||
-                    geschaeftswagen.getParkplatz ( ).toLowerCase ( ).contains ( searchTerm ) ) {
+                 geschaeftswagen.getBeschreibung ( ).toLowerCase ( ).contains ( searchTerm ) ||
+                 geschaeftswagen.getParkplatz ( ).toLowerCase ( ).contains ( searchTerm ) ) {
                 searchResults.add ( geschaeftswagen );
             }
         }
@@ -475,9 +474,9 @@ class Main {
         }
         else {
             System.out.println ( "\nGefundene Autos:" );
-            for (int i = 0 ; i < searchResults.size ( ) ; i++) {
-                System.out.println ( "Buch " + (i + 1) + ":" );
-                searchResults.get ( i ).anzeigen ( );
+            for ( int i = 0 ; i < searchResults.size ( ) ; i++ ) {
+                System.out.println ( "Buch " + ( i + 1 ) + ":" );
+                searchResults.get ( i ).display ( );
                 System.out.println ( "---------------------" );
             }
         }

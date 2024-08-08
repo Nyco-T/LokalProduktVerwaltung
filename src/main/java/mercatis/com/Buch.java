@@ -3,10 +3,7 @@ package mercatis.com;
 import java.util.Date;
 
 public
-class Buch {
-    private final int    fortlaufendenummer;
-    private       String titel;
-    private       String beschreibung;
+class Buch extends Produkt {
     private       String autorVorname;
     private       String autorNachname;
     private       String buchSprache;
@@ -15,35 +12,13 @@ class Buch {
 
 
     public
-    Buch ( int fortlaufendenummer , String titel , String beschreibung , String autorVorname , String autorNachname , String buchSprache , String isbn , Date erscheinungsdatum ) {
-        this.fortlaufendenummer = fortlaufendenummer;
-        this.titel              = titel;
-        this.beschreibung       = beschreibung;
+    Buch (int fortlaufendenummer, String titel, String beschreibung, String autorVorname , String autorNachname , String buchSprache , String isbn , Date erscheinungsdatum ) {
+        super(fortlaufendenummer, titel, beschreibung );
         this.autorVorname       = autorVorname;
         this.autorNachname      = autorNachname;
         this.buchSprache        = buchSprache;
         this.isbn               = isbn;
         this.erscheinungsdatum  = erscheinungsdatum;
-    }
-
-    public
-    String getTitel ( ) {
-        return titel;
-    }
-
-    public
-    void setTitel ( String titel ) {
-        this.titel = titel;
-    }
-
-    public
-    String getBeschreibung ( ) {
-        return beschreibung;
-    }
-
-    public
-    void setBeschreibung ( String beschreibung ) {
-        this.beschreibung = beschreibung;
     }
 
     public
@@ -98,9 +73,8 @@ class Buch {
 
     public
     void display ( ) {
-        System.out.println ( "Nummer: " + fortlaufendenummer );
-        System.out.println ( "Titel: " + titel );
-        System.out.println ( "Beschreibung: " + beschreibung );
+        System.out.println ( "Titel: " + getTitel () );
+        System.out.println ( "Beschreibung: " + getBeschreibung () );
         System.out.println ( "Autor: " + autorVorname + " " + autorNachname );
         System.out.println ( "Sprache: " + buchSprache );
         System.out.println ( "ISBN: " + isbn );

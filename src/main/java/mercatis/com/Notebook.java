@@ -1,42 +1,18 @@
 package mercatis.com;
 
 public
-class Notebook {
-    private final int    fortlaufendenummer;
-    private       String titel;
-    private       String beschreibung;
+class Notebook extends Produkt{
     private       int    speicherplatz;
     private       String prozessor;
 
     public
-    Notebook ( int fortlaufendenummer , String titel , String beschreibung , int speicherplatz , String prozessor ) {
-        this.fortlaufendenummer = fortlaufendenummer;
-        this.titel              = titel;
-        this.beschreibung       = beschreibung;
+    Notebook (int fortlaufendenummer, String titel, String beschreibung, int speicherplatz , String prozessor ) {
+        super(fortlaufendenummer, titel, beschreibung );
         this.speicherplatz      = speicherplatz;
         this.prozessor          = prozessor;
 
     }
 
-    public
-    String getTitel ( ) {
-        return titel;
-    }
-
-    public
-    void setTitel ( String titel ) {
-        this.titel = titel;
-    }
-
-    public
-    String getBeschreibung ( ) {
-        return beschreibung;
-    }
-
-    public
-    void setBeschreibung ( String beschreibung ) {
-        this.beschreibung = beschreibung;
-    }
 
     public
     int getSpeicherplatz ( ) { return speicherplatz; }
@@ -57,10 +33,9 @@ class Notebook {
     }
 
     public
-    void darstellen ( ) {
-        System.out.println ( "Nummer: " + fortlaufendenummer );
-        System.out.println ( "Titel: " + titel );
-        System.out.println ( "Beschreibung: " + beschreibung );
+    void display ( ) {
+        System.out.println ( "Titel: " + getTitel () );
+        System.out.println ( "Beschreibung: " + getBeschreibung () );
         System.out.println ( "Größe des Speichers: " + speicherplatz );
         System.out.println ( "Sprache: " + prozessor );
 
