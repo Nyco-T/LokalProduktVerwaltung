@@ -33,7 +33,7 @@ class Main {
                     manageGeschaeftswagen ( );
                     break;
                 case 4:
-                    manageAllProdukts ( );
+                    manageAllProducts ( );
                     break;
                 case 5:
                     running = false;
@@ -486,7 +486,7 @@ class Main {
     }
 
     private static
-    void manageAllProdukts ( ) {
+    void manageAllProducts ( ) {
             if ( buecherListe.isEmpty ( ) ) {
                 System.out.println ( "Die Bücherliste ist leer." );
             }
