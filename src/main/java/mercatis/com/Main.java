@@ -33,6 +33,9 @@ class Main {
                     manageGeschaeftswagen ( );
                     break;
                 case 4:
+                    manageAllProdukts ( );
+                    break;
+                case 5:
                     running = false;
                     System.out.println ( "Programm wird beendet. Auf Wiedersehen!" );
                     break;
@@ -482,5 +485,45 @@ class Main {
         }
     }
 
+    private static
+    void manageAllProdukts ( ) {
+            if ( buecherListe.isEmpty ( ) ) {
+                System.out.println ( "Die Bücherliste ist leer." );
+            }
+            else {
+                System.out.println ( "\nGespeicherte Bücher:" );
+                for ( int i = 0 ; i < buecherListe.size ( ) ; i++ ) {
+                    System.out.println ( "Buch " + ( i + 1 ) + ":" );
+                    buecherListe.get ( i ).display ( );
+                    System.out.println ( "---------------------" );
+                }
+            }
+        if ( notebookListe.isEmpty ( ) ) {
+            System.out.println ( "Die Notebookliste ist leer." );
+        }
+        else {
+            System.out.println ( "\nGespeicherte Notebooks:" );
+            for ( int i = 0 ; i < notebookListe.size ( ) ; i++ ) {
+                System.out.println ( "Notebook " + ( i + 1 ) + ":" );
+                notebookListe.get ( i ).display ( );
+                System.out.println ( "---------------------" );
+            }
+        }
+        if ( geschaeftswagenListe.isEmpty ( ) ) {
+            System.out.println ( "Die Autoliste ist leer." );
+        }
+        else {
+            System.out.println ( "\nGespeicherte Autos:" );
+            for ( int i = 0 ; i < geschaeftswagenListe.size ( ) ; i++ ) {
+                System.out.println ( "Auto " + ( i + 1 ) + ":" );
+                geschaeftswagenListe.get ( i ).display ( );
+                System.out.println ( "---------------------" );
+            }
+        }
+    }
+
+
 
 }
+
+
