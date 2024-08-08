@@ -417,8 +417,6 @@ class Main {
         String          parkplatz = scanner.nextLine ( );
         Geschaeftswagen auto      = new Geschaeftswagen ( fortlaufendenummer , titel , beschreibung , kmStand , parkplatz );
         geschaeftswagenListe.add ( auto );
-        Geschaeftswagen geschaeftswagen = new Geschaeftswagen ( fortlaufendenummer , titel , beschreibung , kmStand , parkplatz );
-        geschaeftswagenListe.add ( geschaeftswagen );
         fortlaufendenummer++;
         System.out.println ( "Buch wurde erfolgreich hinzugefügt." );
     }
